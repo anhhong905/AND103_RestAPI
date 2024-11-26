@@ -43,7 +43,7 @@ router.post("/login", async function (req, res){
   try {
     const {username, password} = req.body;
     const checkUser = await userModel.findOne({username: username, password: password});
-
+    console.log(checkUser);
     if(checkUser == null){
       res.status(200). json({status: false, message: "Username và mật khẩu không đúng"});
     }else{
