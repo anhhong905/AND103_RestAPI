@@ -34,7 +34,7 @@ router.get("/all", async function (req, res) {
             }else{
                 //xử lý chức năng tương ứng với API
                 var list = await productModel.find(); // Lấy tất cả
-                res.status(200).json(list);
+                res.status(200).json({status: true, message: "Thành công", data: list});
             }
             });
         }else{
