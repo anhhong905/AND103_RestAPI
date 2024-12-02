@@ -10,6 +10,7 @@ require('./models/userModel');
 require('./models/categoryModel');
 require('./models/productModel');
 require('./models/studentModel');
+require('./models/nguoidungModel');
 
 //Import các router
 var indexRouter = require('./routes/index');  // Đảm bảo đúng đường dẫn
@@ -17,6 +18,7 @@ var usersRouter = require('./routes/users');
 var productRouter = require('./routes/products');
 var studentRouter = require('./routes/student');
 var transpoterRouter = require('./routes/transpoter');
+var nguoidungRouter = require('./routes/nguoidung');
 
 
 var app = express();
@@ -41,6 +43,7 @@ app.use('/users', usersRouter);
 app.use('/products', productRouter);
 app.use('/student', studentRouter);
 app.use('/api', transpoterRouter);
+app.use('/nguoidung', nguoidungRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
