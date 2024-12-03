@@ -9,9 +9,8 @@ const nguoidungSchema = new Schema({
     email: { type: String}, // Email (bắt buộc, không trùng lặp)
     vaitro: { type: String, enum: ["user", "admin"], default: "user" }, // Vai trò (chỉ cho phép "user" hoặc "admin")
     sdt: { type: String }, // Số điện thoại (bắt buộc)
-    ngaysinh: { type: Date }, // Ngày sinh
+    ngaysinh: { type: Date }, 
     nghe: { type: String }, // Nghề nghiệp
-    anh: { type: String } // Đường dẫn ảnh đại diện
 });
 
 // Export model
